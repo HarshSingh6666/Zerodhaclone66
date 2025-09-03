@@ -3,16 +3,16 @@ import { useCookies } from "react-cookie";
 import "./Logout.css"; // CSS import
 
 const Logout = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(["token"]);
+  const [, , removeCookie] = useCookies(["token"]); // only using removeCookie
 
   const handleYes = () => {
     removeCookie("token", { path: "/" });
     localStorage.removeItem("token");
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "https://zerodha-clone66.netlify.app"; // ✅ redirect to Netlify site
   };
 
   const handleNo = () => {
-    window.location.href = "http://localhost:5000/";
+    window.location.href = "https://zerodha-clone66.netlify.app"; // ✅ same here
   };
 
   return (
