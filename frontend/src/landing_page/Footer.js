@@ -6,7 +6,11 @@ function Footer() {
       <div className="container border-top">
         <div className="row">
           <div className="col-3 mt-5">
-            <img src="media/logo.svg" alt="Zerodha logo" style={{ width: "40%" }} />
+            <img
+              src="media/logo.svg"
+              alt="Zerodha logo"
+              style={{ width: "40%" }}
+            />
             <p className="mt-3">@ 2010 -2025, Zerodha Broking Ltd</p>
             <p>All rights reserved</p>
             <p className="border-bottom">
@@ -26,42 +30,74 @@ function Footer() {
 
           <div className="col-2 mt-5">
             <h4 className="mb-3">Account</h4>
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               Open demat account
             </a>
             <br />
             <br />
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               Minor demat account
             </a>
             <br />
             <br />
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               NRI demat account
             </a>
             <br />
             <br />
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               Commodity
             </a>
             <br />
             <br />
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               Dematerialisation
             </a>
             <br />
             <br />
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               Fund transfer
             </a>
             <br />
             <br />
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               MTF
             </a>
             <br />
             <br />
-            <a href="#" style={{ textDecoration: "none", color: "black" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none", color: "black" }}
+            >
               Referral program
             </a>
             <br />
@@ -114,11 +150,17 @@ function Footer() {
             Public School, J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka,
             India. For any complaints pertaining to securities broking please
             write to{" "}
-            <a href="mailto:complaints@zerodha.com" style={{ textDecoration: "none" }}>
+            <a
+              href="mailto:complaints@zerodha.com"
+              style={{ textDecoration: "none" }}
+            >
               complaints@zerodha.com
             </a>
             , for DP related to{" "}
-            <a href="mailto:dp@zerodha.com" style={{ textDecoration: "none" }}>
+            <a
+              href="mailto:dp@zerodha.com"
+              style={{ textDecoration: "none" }}
+            >
               dp@zerodha.com
             </a>
             . Please ensure you carefully read the Risk Disclosure Document as
@@ -127,7 +169,11 @@ function Footer() {
 
           <p>
             Procedure to file a complaint on{" "}
-            <a href="#" style={{ textDecoration: "none" }}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              style={{ textDecoration: "none" }}
+            >
               SEBI SCORES
             </a>
             : Register on SCORES portal. Mandatory details for filing complaints
@@ -136,8 +182,8 @@ function Footer() {
           </p>
 
           <p>
-            Investments in securities market are subject to market risks; read all
-            the related documents carefully before investing
+            Investments in securities market are subject to market risks; read
+            all the related documents carefully before investing
           </p>
 
           <p>
