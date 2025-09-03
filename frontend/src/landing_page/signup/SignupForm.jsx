@@ -45,7 +45,7 @@ const SignupForm = () => {
         handleSuccess(message);
         setTimeout(() => {
           // 👇 redirect to dashboard app (change URL if needed)
-          window.location.href = "http://localhost:5000";
+          window.location.href = "https://zerodhaclone-dashboard66.netlify.app/";
         }, 1000);
       } else {
         handleError(message);

@@ -7,32 +7,35 @@ const cookieParser = require("cookie-parser");
 // Models
 const { HoldingsModel } = require("./Models/HoldingsModel");
 const { PositionsModel } = require("./Models/PositionsModel");
-const { OrdersModel } = require("./Models/OrdersModel"); // make sure this exists
+const { OrdersModel } = require("./Models/OrdersModel");
 
 // Routes
 const authRoute = require("./Routes/AuthRoute");
 
 const app = express();
-const PORT = process.env.PORT || 3002;
 const MONGO_URL = process.env.MONGO_URL;
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:5000"],  // दोनों allow
+  origin: [
+    "https://zerodhaclone-dashboard66.netlify.app/",
+
+    "https://zerodha-clone66.netlify.app"   // ✅ Netlify frontend allow karo
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
 app.use(cookieParser());
-app.use(express.json()); // replaces body-parser
+app.use(express.json());
 
 // MongoDB connection
 mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log("MongoDB connected successfully"))
-.catch(err => console.error("MongoDB connection error:", err));
+.then(() => console.log("✅ MongoDB connected successfully"))
+.catch(err => console.error("❌ MongoDB connection error:", err));
 
 // Routes
 app.use("/", authRoute);
@@ -71,7 +74,14 @@ app.post("/newOrder", async (req, res) => {
   }
 });
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// ⚡ Important: Vercel does not use app.listen
+// Local dev ke liye listen karna padega
+if (process.env.NODE_ENV !== "production") {
+  const PORT = process.env.PORT || 3002;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running locally on port ${PORT}`);
+  });
+}
+
+// ✅ Export for Vercel serverless
+module.exports = app;

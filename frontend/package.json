@@ -17,25 +17,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
-<<<<<<< HEAD
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-=======
-    "build": "CI=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src --ext .js,.jsx"
->>>>>>> 12767a59619fbd76eed6f133c26db8bcf782669f
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
-  },
-  "engines": {
-    "node": "18"
   },
   "browserslist": {
     "production": [
@@ -50,4 +40,3 @@
     ]
   }
 }
-
