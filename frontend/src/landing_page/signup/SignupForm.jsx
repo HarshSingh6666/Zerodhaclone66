@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";  // removed useNavigate
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "./signup.css";
+
 const SignupForm = () => {
-  const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
     email: "",
     password: "",
     username: "",
   });
   const { email, password, username } = inputValue;
+
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue({
@@ -23,6 +24,7 @@ const SignupForm = () => {
     toast.error(err, {
       position: "bottom-left",
     });
+
   const handleSuccess = (msg) =>
     toast.success(msg, {
       position: "bottom-right",
@@ -39,7 +41,7 @@ const SignupForm = () => {
         { withCredentials: true }
       );
       const { success, message } = data;
-       if (success) {
+      if (success) {
         handleSuccess(message);
         setTimeout(() => {
           // 👇 redirect to dashboard app (change URL if needed)
@@ -52,7 +54,6 @@ const SignupForm = () => {
       console.log(error);
     }
     setInputValue({
-      ...inputValue,
       email: "",
       password: "",
       username: "",
@@ -74,7 +75,7 @@ const SignupForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">Username</label>
+          <label htmlFor="username">Username</label>
           <input
             type="text"
             name="username"
@@ -95,7 +96,7 @@ const SignupForm = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"/login"}>Login</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </span>
       </form>
       <ToastContainer />
