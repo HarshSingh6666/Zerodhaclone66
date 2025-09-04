@@ -30,76 +30,52 @@ function Footer() {
 
           <div className="col-2 mt-5">
             <h4 className="mb-3">Account</h4>
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <button type="button" className="link-button">
               Open demat account
-            </a>
+            </button>
             <br />
             <br />
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <a href="https://zerodha.com/open-account/minor/">
               Minor demat account
             </a>
             <br />
             <br />
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <button type="button" className="link-button">
               NRI demat account
-            </a>
+            </button>
             <br />
             <br />
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <button type="button" className="link-button">
               Commodity
-            </a>
+            </button>
             <br />
             <br />
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <button type="button" className="link-button">
               Dematerialisation
-            </a>
+            </button>
             <br />
             <br />
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <button type="button" className="link-button">
               Fund transfer
-            </a>
+            </button>
             <br />
             <br />
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <button type="button" className="link-button">
               MTF
-            </a>
+            </button>
             <br />
             <br />
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              style={{ textDecoration: "none", color: "black" }}
-            >
+
+            <button type="button" className="link-button">
               Referral program
-            </a>
+            </button>
             <br />
             <br />
           </div>
@@ -170,9 +146,10 @@ function Footer() {
           <p>
             Procedure to file a complaint on{" "}
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
+              href="https://scores.gov.in/scores/Welcome.html"
               style={{ textDecoration: "none" }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               SEBI SCORES
             </a>
@@ -194,6 +171,25 @@ function Footer() {
           </p>
         </div>
       </div>
+
+      {/* 👇 Styling for link-like buttons */}
+      <style>
+        {`
+          .link-button {
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          .link-button:hover {
+            text-decoration: underline;
+          }
+        `}
+      </style>
     </footer>
   );
 }
