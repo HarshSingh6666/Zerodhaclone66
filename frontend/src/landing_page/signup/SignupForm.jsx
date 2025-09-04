@@ -34,7 +34,7 @@ const SignupForm = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "https://zerodhaclone66-45qz.vercel.app/signup",
+        "https://zerodhaclone66.vercel.app/signup",
         {
           ...inputValue,
         },
